@@ -14,15 +14,39 @@ main {
     display: flex;
     margin-bottom: size(20);
 
+    @include mq(640) {
+      flex-direction: column;
+      width: size(300);
+    }
+
     .container-img {
       width: 50%;
 
-      img{
+      @include mq(640) {
+        width: 100%;
+      }
+
+      img {
         border-top-left-radius: size(10);
         border-bottom-left-radius: size(10);
 
-        &.img-mobile{
+        @include mq(640) {
+          border-bottom-left-radius: 0;
+          border-top-right-radius: size(10);
+        }
+
+        &.img-mobile {
           display: none;
+        }
+
+        @include mq(640) {
+          &.img-mobile {
+            display: block;
+          }
+
+          &.img-desktop {
+            display: none;
+          }
         }
       }
     }
@@ -34,19 +58,25 @@ main {
       flex-direction: column;
       justify-content: space-between;
 
+      @include mq(640) {
+        width: 100%;
+      }
+
       .text-1 {
         font-size: size(12);
         text-transform: uppercase;
         letter-spacing: size(3);
         color: $grayish-blue;
+        margin-bottom: size(20);
       }
 
       .title {
-        font-family: 'Fraunces', serif;
+        font-family: "Fraunces", serif;
         font-size: size(28);
         color: $dark-blue;
         font-weight: 700;
         line-height: 1;
+        margin-bottom: size(20);
       }
 
       .text-2 {
@@ -54,14 +84,16 @@ main {
         letter-spacing: size(0.5);
         color: $grayish-blue;
         line-height: 1.6;
+        margin-bottom: size(20);
       }
 
       .prices {
         display: flex;
         align-items: center;
+        margin-bottom: size(20);
 
         .with-discount {
-          font-family: 'Fraunces', serif;
+          font-family: "Fraunces", serif;
           font-size: size(28);
           color: $dark-cyan;
           margin-right: size(20);
@@ -84,9 +116,9 @@ main {
         border: none;
         border-radius: size(5);
         cursor: pointer;
-        transition: .5s;
+        transition: 0.5s;
 
-        &:hover{
+        &:hover {
           background: $dark-green;
         }
 
@@ -97,7 +129,7 @@ main {
         span {
           font-size: size(13);
           color: $white;
-          letter-spacing: size(.5);
+          letter-spacing: size(0.5);
         }
       }
     }

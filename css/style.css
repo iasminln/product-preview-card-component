@@ -46,8 +46,21 @@ main .modal {
   margin-bottom: 1.25rem;
 }
 
+@media (max-width: 640px) {
+  main .modal {
+    flex-direction: column;
+    width: 18.75rem;
+  }
+}
+
 main .modal .container-img {
   width: 50%;
+}
+
+@media (max-width: 640px) {
+  main .modal .container-img {
+    width: 100%;
+  }
 }
 
 main .modal .container-img img {
@@ -55,8 +68,24 @@ main .modal .container-img img {
   border-bottom-left-radius: 0.625rem;
 }
 
+@media (max-width: 640px) {
+  main .modal .container-img img {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.625rem;
+  }
+}
+
 main .modal .container-img img.img-mobile {
   display: none;
+}
+
+@media (max-width: 640px) {
+  main .modal .container-img img.img-mobile {
+    display: block;
+  }
+  main .modal .container-img img.img-desktop {
+    display: none;
+  }
 }
 
 main .modal .container-text {
@@ -67,19 +96,27 @@ main .modal .container-text {
   justify-content: space-between;
 }
 
+@media (max-width: 640px) {
+  main .modal .container-text {
+    width: 100%;
+  }
+}
+
 main .modal .container-text .text-1 {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1875rem;
   color: #6c7289;
+  margin-bottom: 1.25rem;
 }
 
 main .modal .container-text .title {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   font-size: 1.75rem;
   color: #1c232b;
   font-weight: 700;
   line-height: 1;
+  margin-bottom: 1.25rem;
 }
 
 main .modal .container-text .text-2 {
@@ -87,15 +124,17 @@ main .modal .container-text .text-2 {
   letter-spacing: 0.03125rem;
   color: #6c7289;
   line-height: 1.6;
+  margin-bottom: 1.25rem;
 }
 
 main .modal .container-text .prices {
   display: flex;
   align-items: center;
+  margin-bottom: 1.25rem;
 }
 
 main .modal .container-text .prices .with-discount {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   font-size: 1.75rem;
   color: #3c8067;
   margin-right: 1.25rem;
@@ -117,7 +156,7 @@ main .modal .container-text button {
   border: none;
   border-radius: 0.3125rem;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 main .modal .container-text button:hover {
