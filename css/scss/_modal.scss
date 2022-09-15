@@ -1,0 +1,105 @@
+main {
+  background: $cream;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  .modal {
+    background: $white;
+    width: size(520);
+    border-radius: size(10);
+    display: flex;
+    margin-bottom: size(20);
+
+    .container-img {
+      width: 50%;
+
+      img{
+        border-top-left-radius: size(10);
+        border-bottom-left-radius: size(10);
+
+        &.img-mobile{
+          display: none;
+        }
+      }
+    }
+
+    .container-text {
+      width: 50%;
+      padding: size(25);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .text-1 {
+        font-size: size(12);
+        text-transform: uppercase;
+        letter-spacing: size(3);
+        color: $grayish-blue;
+      }
+
+      .title {
+        font-family: 'Fraunces', serif;
+        font-size: size(28);
+        color: $dark-blue;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .text-2 {
+        font-size: size(12);
+        letter-spacing: size(0.5);
+        color: $grayish-blue;
+        line-height: 1.6;
+      }
+
+      .prices {
+        display: flex;
+        align-items: center;
+
+        .with-discount {
+          font-family: 'Fraunces', serif;
+          font-size: size(28);
+          color: $dark-cyan;
+          margin-right: size(20);
+        }
+
+        .without-discount {
+          font-size: size(12);
+          text-decoration: line-through;
+          color: $grayish-blue;
+        }
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        background: $dark-cyan;
+        border: none;
+        border-radius: size(5);
+        cursor: pointer;
+        transition: .5s;
+
+        &:hover{
+          background: $dark-green;
+        }
+
+        img {
+          margin-right: size(10);
+        }
+
+        span {
+          font-size: size(13);
+          color: $white;
+          letter-spacing: size(.5);
+        }
+      }
+    }
+  }
+}
